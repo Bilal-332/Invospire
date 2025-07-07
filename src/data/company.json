@@ -1,0 +1,46 @@
+{
+  "stats": [
+    {
+      "number": "14+",
+      "label": "Years in Business",
+      "description": "Delivering excellence since 2010"
+    },
+    {
+      "number": "300+",
+      "label": "Global Clients",
+      "description": "Trusted by businesses worldwide"
+    },
+    {
+      "number": "250+",
+      "label": "Tech Experts",
+      "description": "Skilled professionals ready to help"
+    },
+    {
+      "number": "500+",
+      "label": "Projects Delivered",
+      "description": "Successful digital transformations"
+    }
+  ],
+  "technologies": [
+    { "name": "React", "logo": "/tech-logos/react.svg" },
+    { "name": "Next.js", "logo": "/tech-logos/nextjs.svg" },
+    { "name": "Node.js", "logo": "/tech-logos/nodejs.svg" },
+    { "name": "TypeScript", "logo": "/tech-logos/typescript.svg" },
+    { "name": "Python", "logo": "/tech-logos/python.svg" },
+    { "name": "AWS", "logo": "/tech-logos/aws.svg" },
+    { "name": "Docker", "logo": "/tech-logos/docker.svg" },
+    { "name": "MongoDB", "logo": "/tech-logos/mongodb.svg" },
+    { "name": "PostgreSQL", "logo": "/tech-logos/postgresql.svg" },
+    { "name": "Shopify", "logo": "/tech-logos/shopify.svg" },
+    { "name": "WordPress", "logo": "/tech-logos/wordpress.svg" },
+    { "name": "Figma", "logo": "/tech-logos/figma.svg" }
+  ],
+  "partners": [
+    { "name": "Invospire", "logo": "/partner-logos/invospire.svg" },
+    { "name": "Amazon", "logo": "/partner-logos/amazon.svg" },
+    { "name": "eBay", "logo": "/partner-logos/ebay.svg" },
+    { "name": "Etsy", "logo": "/partner-logos/etsy.svg" },
+    { "name": "TikTok Shop", "logo": "/partner-logos/tiktok.svg" },
+    { "name": "Shopify", "logo": "/partner-logos/shopify.svg" }
+  ]
+}
