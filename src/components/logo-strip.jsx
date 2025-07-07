@@ -4,16 +4,53 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 
 const partnerLogos = [
-  { name: "Meta", logo: "/logos/meta-logo.PNG", width: 120, height: 40 },
-  { name: "TikTok Shop", logo: "/logos/tiktok-shop-logo.PNG", width: 120, height: 40 },
-  { name: "Shopify", logo: "/logos/shopify-logo.PNG", width: 120, height: 40 },
-  { name: "WordPress", logo: "/logos/wordpress-logo.PNG", width: 120, height: 40 },
-  { name: "Amazon", logo: "/logos/amazon-logo.PNG", width: 120, height: 40 },
-  { name: "Google Analytics", logo: "/logos/google-analytics-logo.PNG", width: 140, height: 40 },
+  { 
+    name: "Meta", 
+    logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v11.15.0/icons/meta.svg", 
+    width: 140, 
+    height: 50,
+    fallback: "/logos/meta-logo.PNG"
+  },
+  { 
+    name: "TikTok", 
+    logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v11.15.0/icons/tiktok.svg", 
+    width: 140, 
+    height: 50,
+    fallback: "/logos/tiktok-shop-logo.PNG"
+  },
+  { 
+    name: "Shopify", 
+    logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v11.15.0/icons/shopify.svg", 
+    width: 140, 
+    height: 50,
+    fallback: "/logos/shopify-logo.PNG"
+  },
+  { 
+    name: "WordPress", 
+    logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v11.15.0/icons/wordpress.svg", 
+    width: 140, 
+    height: 50,
+    fallback: "/logos/wordpress-logo.PNG"
+  },
+  { 
+    name: "Amazon", 
+    logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v11.15.0/icons/amazon.svg", 
+    width: 140, 
+    height: 50,
+    fallback: "/logos/amazon-logo.PNG"
+  },
+  { 
+    name: "Google", 
+    logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v11.15.0/icons/google.svg", 
+    width: 140, 
+    height: 50,
+    fallback: "/logos/google-analytics-logo.PNG"
+  },
 ]
 
 export function LogoStrip() {
   const [currentOrder, setCurrentOrder] = useState([0, 1, 2, 3, 4, 5])
+  const [logoErrors, setLogoErrors] = useState({})
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -24,10 +61,18 @@ export function LogoStrip() {
         newOrder.unshift(lastItem)
         return newOrder
       })
-    }, 9000) // Change every 5 seconds for smoother effect
+    }, 9000) // Change every 9 seconds for smoother effect
 
     return () => clearInterval(interval)
   }, [])
+
+  const handleImageError = (logoIndex) => {
+    setLogoErrors(prev => ({ ...prev, [logoIndex]: true }))
+  }
+
+  const getLogoSrc = (logoIndex) => {
+    return logoErrors[logoIndex] ? partnerLogos[logoIndex].fallback : partnerLogos[logoIndex].logo
+  }
 
   return (
     <section className="w-full -mt-16">
@@ -41,11 +86,13 @@ export function LogoStrip() {
                 className="flex items-center justify-center transition-all duration-1500 ease-in-out transform hover:scale-110 flex-1"
               >
                 <Image
-                  src={partnerLogos[logoIndex].logo}
+                  src={getLogoSrc(logoIndex)}
                   alt={`${partnerLogos[logoIndex].name} logo`}
                   width={partnerLogos[logoIndex].width}
                   height={partnerLogos[logoIndex].height}
-                  className="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"
+                  className="h-32 w-auto object-contain filter brightness-0 hover:brightness-100 hover:filter-none transition-all duration-500 ease-in-out"
+                  onError={() => handleImageError(logoIndex)}
+                  style={{ maxWidth: '140px' }}
                 />
               </div>
             ))}
@@ -59,11 +106,13 @@ export function LogoStrip() {
                 className="flex items-center justify-center transition-all duration-1500 ease-in-out transform hover:scale-110"
               >
                 <Image
-                  src={partnerLogos[logoIndex].logo}
+                  src={getLogoSrc(logoIndex)}
                   alt={`${partnerLogos[logoIndex].name} logo`}
                   width={partnerLogos[logoIndex].width}
                   height={partnerLogos[logoIndex].height}
-                  className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"
+                  className="h-24 w-auto object-contain filter brightness-0 hover:brightness-100 hover:filter-none transition-all duration-500 ease-in-out"
+                  onError={() => handleImageError(logoIndex)}
+                  style={{ maxWidth: '120px' }}
                 />
               </div>
             ))}

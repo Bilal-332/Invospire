@@ -28,7 +28,7 @@ export default function HeroBanner() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-[110vh] flex items-center overflow-hidden">
       {/* Dark gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black"></div>
       
@@ -39,16 +39,16 @@ export default function HeroBanner() {
       }}></div>
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen pt-20 lg:pt-24 pb-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[110vh] pt-24 lg:pt-28 pb-24">
           {/* Left Column - Content */}
-          <div className="space-y-12">
+          <div className="space-y-12 px-4 lg:px-8">
             {/* Main Heading */}
             <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <h1 className="text-6xl lg:text-7xl xl:text-8xl font-bold leading-none mb-8">
-                <span className="block text-white">
+              <h1 className="text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.1] mb-16 pb-4">
+                <span className="block text-white mb-4">
                   Simply Exceptional
                 </span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#2DD4BF] to-[#FBBF24]">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#2DD4BF] to-[#FBBF24] pb-2">
                   Software Engineering
                 </span>
               </h1>

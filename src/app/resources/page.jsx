@@ -1,395 +1,199 @@
-import { Metadata } from 'next'
-import Link from 'next/link'
-import Image from 'next/image'
-import { ArrowRight, Calendar, User, Tag, Search, BookOpen, FileText, Video } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
+"use client"
 
-export const metadata = {
-  title: 'Resources | Invospire - Insights, Guides & Industry Knowledge',
-  description: 'Explore our comprehensive collection of articles, case studies, and insights on software engineering, technology trends, and business solutions.',
-  keywords: 'software engineering blog, technology articles, case studies, industry insights, development guides'
-}
+import { useState } from "react"
+import Link from "next/link"
+import { Search, ChevronLeft, ChevronRight, Clock, User } from "lucide-react"
 
 export default function ResourcesPage() {
-  // Mock blog posts data - in real app this would come from CMS or markdown files
-  const featuredPosts = [
+  const [activeTab, setActiveTab] = useState("All")
+  const [searchTerm, setSearchTerm] = useState("")
+
+  const tabs = [
+    { id: "All", label: "All" },
+    { id: "Case Studies", label: "Case Studies" },
+    { id: "Blogs", label: "Blogs" },
+    { id: "Infographics", label: "Infographics" },
+    { id: "Ebooks", label: "Ebooks" }
+  ]
+
+  const resources = [
     {
-      slug: "modern-web-development-trends-2024",
-      title: "Modern Web Development Trends in 2024",
-      excerpt: "Explore the latest trends shaping web development, from AI integration to advanced frameworks and performance optimization techniques.",
+      id: 1,
+      title: "Boosted CX and increased operational efficiency for a Fortune 500 Media Conglomerate",
+      excerpt: "How we helped a major media company transform their customer experience and streamline operations through innovative technology solutions.",
       author: "Sarah Johnson",
-      date: "2024-01-15",
-      category: "Web Development",
-      image: "/blog/web-trends-2024.jpg",
-      featured: true
+      authorAvatar: "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=32&h=32&fit=crop&crop=face",
+      date: "Jun 15, 2024",
+      readTime: "8 min read",
+      category: "Case Studies",
+      badge: "Case Study",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+      size: "large"
     },
     {
-      slug: "building-scalable-ecommerce-platforms",
-      title: "Building Scalable E-commerce Platforms",
-      excerpt: "Learn how to architect e-commerce solutions that can handle millions of users and transactions with optimal performance.",
+      id: 2,
+      title: "How To Build an Accounting Software like Xero?",
+      excerpt: "A comprehensive guide to building scalable accounting software with modern technologies and best practices.",
+      author: "Saraswati Roy",
+      authorAvatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face",
+      date: "Jun 12, 2024",
+      readTime: "12 min read",
+      category: "Blogs",
+      badge: "Blog",
+      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=250&fit=crop",
+      size: "medium"
+    },
+    {
+      id: 3,
+      title: "E-commerce Platform Migration: A Complete Guide",
+      excerpt: "Learn how to successfully migrate your e-commerce platform without losing data or customers.",
       author: "Michael Chen",
-      date: "2024-01-10",
-      category: "E-commerce",
-      image: "/blog/ecommerce-scalability.jpg",
-      featured: true
+      authorAvatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&crop=face",
+      date: "Jun 10, 2024",
+      readTime: "10 min read",
+      category: "Blogs",
+      badge: "Blog",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
+      size: "medium"
     },
     {
-      slug: "cloud-native-architecture-best-practices",
-      title: "Cloud-Native Architecture Best Practices",
-      excerpt: "Comprehensive guide to designing and implementing cloud-native applications for maximum scalability and reliability.",
-      author: "Emily Rodriguez",
-      date: "2024-01-05",
-      category: "Cloud Computing",
-      image: "/blog/cloud-native.jpg",
-      featured: true
+      id: 4,
+      title: "Digital Transformation Success Metrics",
+      excerpt: "Key performance indicators to measure the success of your digital transformation initiative.",
+      author: "Emma Wilson",
+      authorAvatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=32&h=32&fit=crop&crop=face",
+      date: "Jun 8, 2024",
+      readTime: "6 min read",
+      category: "Infographics",
+      badge: "Infographic",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
+      size: "medium"
+    },
+    {
+      id: 5,
+      title: "Modern Web Development Best Practices",
+      excerpt: "Essential practices for building performant, scalable, and maintainable web applications.",
+      author: "David Park",
+      authorAvatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=32&h=32&fit=crop&crop=face",
+      date: "Jun 5, 2024",
+      readTime: "15 min read",
+      category: "Ebooks",
+      badge: "Ebook",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=250&fit=crop",
+      size: "medium"
     }
   ]
 
-  const recentPosts = [
-    {
-      slug: "ai-integration-software-development",
-      title: "AI Integration in Software Development",
-      excerpt: "How artificial intelligence is transforming the way we build software applications.",
-      author: "David Kim",
-      date: "2024-01-20",
-      category: "AI & Machine Learning",
-      readTime: "5 min read"
-    },
-    {
-      slug: "microservices-vs-monolith-architecture",
-      title: "Microservices vs Monolith Architecture",
-      excerpt: "Understanding when to choose microservices over monolithic architecture for your project.",
-      author: "Sarah Johnson",
-      date: "2024-01-18",
-      category: "Software Architecture",
-      readTime: "7 min read"
-    },
-    {
-      slug: "cybersecurity-best-practices-developers",
-      title: "Cybersecurity Best Practices for Developers",
-      excerpt: "Essential security practices every developer should implement in their applications.",
-      author: "Michael Chen",
-      date: "2024-01-16",
-      category: "Security",
-      readTime: "6 min read"
-    },
-    {
-      slug: "mobile-app-performance-optimization",
-      title: "Mobile App Performance Optimization",
-      excerpt: "Techniques to improve mobile app performance and user experience.",
-      author: "Emily Rodriguez",
-      date: "2024-01-14",
-      category: "Mobile Development",
-      readTime: "8 min read"
-    }
-  ]
-
-  const categories = [
-    { name: "Web Development", count: 15 },
-    { name: "E-commerce", count: 12 },
-    { name: "Cloud Computing", count: 8 },
-    { name: "AI & Machine Learning", count: 6 },
-    { name: "Mobile Development", count: 10 },
-    { name: "Software Architecture", count: 9 },
-    { name: "Security", count: 7 },
-    { name: "DevOps", count: 5 }
-  ]
+  const filteredResources = resources.filter(resource => {
+    const matchesTab = activeTab === "All" || resource.category === activeTab
+    const matchesSearch = resource.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      resource.excerpt.toLowerCase().includes(searchTerm.toLowerCase())
+    return matchesTab && matchesSearch
+  })
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 pt-20 pb-16">
-        <div className="container mx-auto px-4">
+    <div className="min-h-screen bg-gray-50">
+      <section className="relative bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 pt-24 pb-32 overflow-hidden">
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden">
+          <svg className="relative block w-full h-24" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="currentColor" className="text-white" />
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="currentColor" className="text-white" />
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="currentColor" className="text-white" />
+          </svg>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <nav className="text-sm text-gray-300 mb-8">
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <span className="mx-2">›</span>
+            <span className="text-white ">Resources</span>
+          </nav>
+
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Resources & <span className="text-blue-600">Insights</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-[#2DD4BF] to-[#FBBF24] bg-clip-text text-transparent">Resources</span> 
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Stay ahead with our latest insights, guides, and industry knowledge on software 
-              engineering, technology trends, and business solutions.
-            </p>
-            
-            {/* Search Bar */}
-            <div className="max-w-md mx-auto">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
-                <Input 
-                  type="text" 
-                  placeholder="Search articles..." 
-                  className="pl-10 pr-4 py-3 w-full"
-                />
-              </div>
-            </div>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">Stay informed, stay inspired with the latest trends and technology insights from our collection of resources.</p>
           </div>
         </div>
       </section>
 
-      {/* Featured Articles */}
-      <section className="py-20">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex items-center justify-between mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                Featured Articles
-              </h2>
-              <Button variant="outline" asChild>
-                <Link href="/resources/blog">
-                  View All Posts
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {featuredPosts.map((post, index) => (
-                <article key={post.slug} className="group">
-                  <Link href={`/resources/blog/${post.slug}`}>
-                    <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                      <div className="aspect-video bg-gray-200 relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                          <BookOpen className="h-12 w-12 text-white" />
-                        </div>
-                        <div className="absolute top-4 left-4">
-                          <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                            {post.category}
-                          </span>
-                        </div>
-                      </div>
-                      
-                      <div className="p-6">
-                        <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
-                          {post.title}
-                        </h3>
-                        
-                        <p className="text-gray-600 mb-4 line-clamp-3">
-                          {post.excerpt}
-                        </p>
-                        
-                        <div className="flex items-center gap-4 text-sm text-gray-500">
-                          <div className="flex items-center gap-1">
-                            <User className="h-4 w-4" />
-                            <span>{post.author}</span>
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <Calendar className="h-4 w-4" />
-                            <span>{new Date(post.date).toLocaleDateString()}</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                </article>
+          <div className="flex flex-col lg:flex-row justify-between items-center mb-12 gap-6">
+            <div className="flex flex-wrap gap-2">
+              {tabs.map((tab) => (
+                <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeTab === tab.id ? "bg-indigo-600 text-white shadow-lg transform scale-105" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}>
+                  {tab.label}
+                </button>
               ))}
             </div>
+
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-950 h-5 w-5" />
+              <input type="text" placeholder="Search resources..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all duration-300 w-80 text-gray-900" />
+            </div>
           </div>
-        </div>
-      </section>
 
-      {/* Main Content Grid */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
-              {/* Recent Posts */}
-              <div className="lg:col-span-3">
-                <h2 className="text-2xl font-bold text-gray-900 mb-8">
-                  Latest Articles
-                </h2>
-                
-                <div className="space-y-8">
-                  {recentPosts.map((post, index) => (
-                    <article key={post.slug} className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-                      <Link href={`/resources/blog/${post.slug}`} className="group">
-                        <div className="flex items-start gap-6">
-                          <div className="flex-shrink-0 w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                            <FileText className="h-8 w-8 text-white" />
-                          </div>
-                          
-                          <div className="flex-1">
-                            <div className="flex items-center gap-2 mb-2">
-                              <span className="bg-blue-100 text-blue-600 px-2 py-1 rounded text-xs font-medium">
-                                {post.category}
-                              </span>
-                              <span className="text-gray-500 text-sm">
-                                {post.readTime}
-                              </span>
-                            </div>
-                            
-                            <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                              {post.title}
-                            </h3>
-                            
-                            <p className="text-gray-600 mb-3 line-clamp-2">
-                              {post.excerpt}
-                            </p>
-                            
-                            <div className="flex items-center gap-4 text-sm text-gray-500">
-                              <div className="flex items-center gap-1">
-                                <User className="h-4 w-4" />
-                                <span>{post.author}</span>
-                              </div>
-                              <div className="flex items-center gap-1">
-                                <Calendar className="h-4 w-4" />
-                                <span>{new Date(post.date).toLocaleDateString()}</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </Link>
-                    </article>
-                  ))}
-                </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            {filteredResources.map((resource, index) => (
+              <div key={resource.id} className={`group cursor-pointer ${resource.size === "large" ? "lg:col-span-2 lg:row-span-2" : ""}`}>
+                <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full">
 
-                <div className="text-center mt-12">
-                  <Button size="lg" variant="outline" asChild>
-                    <Link href="/resources/blog">
-                      Load More Articles
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-
-              {/* Sidebar */}
-              <div className="lg:col-span-1">
-                <div className="space-y-8">
-                  {/* Categories */}
-                  <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                      Categories
-                    </h3>
-                    <div className="space-y-2">
-                      {categories.map((category, index) => (
-                        <Link 
-                          key={index}
-                          href={`/resources/blog?category=${category.name.toLowerCase().replace(' ', '-')}`}
-                          className="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors"
-                        >
-                          <span className="text-gray-700">{category.name}</span>
-                          <span className="bg-gray-200 text-gray-600 px-2 py-1 rounded-full text-xs">
-                            {category.count}
-                          </span>
-                        </Link>
-                      ))}
+                  <div className="relative overflow-hidden">
+                    <img src={resource.image} alt={resource.title} className={`w-full object-cover transition-transform duration-300 group-hover:scale-110 ${resource.size === "large" ? "h-80" : "h-48"}`} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute top-4 left-4">
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${resource.badge === "Case Study" ? "bg-green-100 text-green-800" : resource.badge === "Blog" ? "bg-blue-100 text-blue-800" : resource.badge === "Infographic" ? "bg-purple-100 text-purple-800" : "bg-orange-100 text-orange-800"}`}>
+                        {resource.badge}
+                      </span>
                     </div>
                   </div>
 
-                  {/* Newsletter Signup */}
-                  <div className="bg-blue-600 rounded-xl p-6 text-white">
-                    <h3 className="text-lg font-semibold mb-3">
-                      Stay Updated
+                  <div className={`p-6 ${resource.size === "large" ? "lg:p-8" : ""}`}>
+                    <h3 className={`font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors duration-300 ${resource.size === "large" ? "text-2xl lg:text-3xl" : "text-xl"}`}>
+                      {resource.title}
                     </h3>
-                    <p className="text-blue-100 text-sm mb-4">
-                      Get the latest insights delivered to your inbox.
+                    <p className={`text-gray-600 mb-4 ${resource.size === "large" ? "text-lg" : "text-sm"}`}>
+                      {resource.excerpt}
                     </p>
-                    <div className="space-y-3">
-                      <Input 
-                        type="email" 
-                        placeholder="Your email address" 
-                        className="bg-white text-gray-900 border-white"
-                      />
-                      <Button className="w-full bg-white text-blue-600 hover:bg-gray-100">
-                        Subscribe
-                      </Button>
-                    </div>
-                  </div>
 
-                  {/* Popular Tags */}
-                  <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                      Popular Tags
-                    </h3>
-                    <div className="flex flex-wrap gap-2">
-                      {[
-                        'React', 'Next.js', 'Node.js', 'TypeScript', 'Cloud', 
-                        'AWS', 'DevOps', 'API', 'Database', 'Performance'
-                      ].map((tag, index) => (
-                        <Link 
-                          key={index}
-                          href={`/resources/blog?tag=${tag.toLowerCase()}`}
-                          className="bg-gray-100 hover:bg-blue-100 hover:text-blue-600 px-3 py-1 rounded-full text-sm transition-colors"
-                        >
-                          #{tag}
-                        </Link>
-                      ))}
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-3">
+                        <img src={resource.authorAvatar} alt={resource.author} className="w-8 h-8 rounded-full" />
+                        <div>
+                          <p className="text-sm font-medium text-gray-900">{resource.author}</p>
+                          <p className="text-xs text-gray-500">{resource.date}</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center text-gray-500 text-sm">
+                        <Clock className="w-4 h-4 mr-1" />
+                        <span>{resource.readTime}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            ))}
+          </div>
+
+          <div className="flex justify-center items-center space-x-2 text-stone-950">
+            <button className="p-2 rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors">
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button className="px-4 py-2 bg-indigo-600 text-white rounded-lg">1</button>
+            <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">2</button>
+            <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">3</button>
+            <span className="px-2 text-gray-500">...</span>
+            <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">10</button>
+            <button className="p-2 rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors">
+              <ChevronRight className="w-5 h-5" />
+            </button>
           </div>
         </div>
       </section>
 
-      {/* Resource Types */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Explore Our Resources
-              </h2>
-              <p className="text-lg text-gray-600">
-                Different types of content to help you stay informed and make better decisions.
-              </p>
-            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center group">
-                <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-600 transition-colors duration-300">
-                  <BookOpen className="h-8 w-8 text-blue-600 group-hover:text-white transition-colors duration-300" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Technical Articles
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  In-depth guides and tutorials on software engineering best practices and modern technologies.
-                </p>
-                <Button variant="outline" asChild>
-                  <Link href="/resources/blog?type=technical">
-                    Browse Articles
-                  </Link>
-                </Button>
-              </div>
-
-              <div className="text-center group">
-                <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-green-600 transition-colors duration-300">
-                  <FileText className="h-8 w-8 text-green-600 group-hover:text-white transition-colors duration-300" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Case Studies
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Real-world examples of how we've helped businesses solve complex challenges with technology.
-                </p>
-                <Button variant="outline" asChild>
-                  <Link href="/resources/case-studies">
-                    View Case Studies
-                  </Link>
-                </Button>
-              </div>
-
-              <div className="text-center group">
-                <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-purple-600 transition-colors duration-300">
-                  <Video className="h-8 w-8 text-purple-600 group-hover:text-white transition-colors duration-300" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Video Content
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Webinars, tutorials, and presentations covering the latest trends in software development.
-                </p>
-                <Button variant="outline" asChild>
-                  <Link href="/resources/videos">
-                    Watch Videos
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

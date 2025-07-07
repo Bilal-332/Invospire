@@ -42,7 +42,7 @@ function HolographicNetwork() {
     return [...Array(4)].map((_, i) => ({ // Increased to 4 rings
       radius: 1.0 + i * 0.4, // Smaller, more compact spacing
       tilt: (i * Math.PI) / 5, // Slightly different angles
-      speed: 0.02 + i * 0.006, // Slower, smoother rotation
+      speed: 0.08 + i * 0.024, // 4x faster than original (doubled again from 0.04 + i * 0.012)
       // Enhanced teal and yellow color scheme
       color: i === 0 ? new THREE.Color("#0D9488") : // Teal-600 (darker)
              i === 1 ? new THREE.Color("#F59E0B") : // Amber-500 (yellow)
@@ -277,7 +277,7 @@ export default function TorusShape3D() {
           enableZoom={false} 
           enablePan={false}
           autoRotate={true}
-          autoRotateSpeed={0.3}
+          autoRotateSpeed={1.2}
         />
       </Canvas>
     </div>

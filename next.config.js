@@ -5,7 +5,7 @@ const nextConfig = {
     mdxRs: true,
   },
   images: {
-    domains: ['placeholder.com'],
+    domains: ['placeholder.com', 'images.unsplash.com', 'cdn.jsdelivr.net'],
   },
   typescript: {
     // Disable TypeScript checking during build

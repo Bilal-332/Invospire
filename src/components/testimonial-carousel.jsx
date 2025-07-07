@@ -47,7 +47,7 @@ export function TestimonialCarousel() {
           {/* Main Testimonial */}
           <div className="bg-white rounded-3xl shadow-xl p-8 lg:p-12 relative">
             {/* Quote Icon */}
-            <div className="absolute top-8 left-8 text-primary/20">
+            <div className="absolute top-8 left-8 text-purple-500/20">
               <Quote className="h-12 w-12" />
             </div>
 
@@ -67,7 +67,7 @@ export function TestimonialCarousel() {
               {/* Avatar and Info */}
               <div className="flex items-center justify-center space-x-4">
                 {/* Placeholder Avatar */}
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-purple-600 rounded-full flex items-center justify-center text-white text-xl font-bold">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-full flex items-center justify-center text-white text-xl font-bold">
                   {currentTestimonial.name.split(' ').map(n => n[0]).join('')}
                 </div>
                 
@@ -89,7 +89,7 @@ export function TestimonialCarousel() {
             <Button
               variant="ghost"
               size="icon"
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 hover:bg-primary hover:text-white"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 hover:bg-gradient-to-r hover:from-purple-500 hover:to-cyan-500 hover:text-white"
               onClick={goToPrevious}
             >
               <ChevronLeft className="h-6 w-6" />
@@ -97,7 +97,7 @@ export function TestimonialCarousel() {
             <Button
               variant="ghost"
               size="icon"
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 hover:bg-primary hover:text-white"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 hover:bg-gradient-to-r hover:from-purple-500 hover:to-cyan-500 hover:text-white"
               onClick={goToNext}
             >
               <ChevronRight className="h-6 w-6" />
@@ -111,7 +111,7 @@ export function TestimonialCarousel() {
                 key={index}
                 className={`w-3 h-3 rounded-full transition-all ${
                   index === currentIndex 
-                    ? "bg-primary scale-125" 
+                    ? "bg-gradient-to-r from-purple-500 to-cyan-500 scale-125" 
                     : "bg-gray-300 hover:bg-gray-400"
                 }`}
                 onClick={() => setCurrentIndex(index)}
@@ -127,11 +127,11 @@ export function TestimonialCarousel() {
               .map((testimonial, index) => (
               <div
                 key={testimonial.id}
-                className="bg-white/80 rounded-xl p-6 border border-gray-200 hover:border-primary/50 transition-all cursor-pointer hover:shadow-md"
+                className="bg-white/80 rounded-xl p-6 border border-gray-200 hover:border-purple-500/50 transition-all cursor-pointer hover:shadow-md"
                 onClick={() => setCurrentIndex(testimonials.findIndex(t => t.id === testimonial.id))}
               >
                 <div className="flex items-center space-x-3 mb-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-primary to-purple-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
+                  <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
                     {testimonial.name.split(' ').map(n => n[0]).join('')}
                   </div>
                   <div>

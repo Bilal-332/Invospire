@@ -65,148 +65,148 @@ export default function TechCapabilities() {
     ],
     technologies: {
       "UI/UX": [
-        { name: "Material UI", logo: "/logos/material-ui.svg", color: "#1976d2" },
-        { name: "Figma", logo: "/logos/figma.svg", color: "#f24e1e" },
-        { name: "Sketch", logo: "/logos/sketch.svg", color: "#f7b500" },
-        { name: "Adobe XD", logo: "/logos/adobe-xd.svg", color: "#ff61f6" },
-        { name: "Miro", logo: "/logos/miro.svg", color: "#050038" },
-        { name: "Photoshop", logo: "/logos/photoshop.svg", color: "#31a8ff" },
-        { name: "Axure", logo: "/logos/axure.svg", color: "#00c4cc" },
-        { name: "HTML5", logo: "/logos/html5.svg", color: "#e34f26" },
-        { name: "Zeplin", logo: "/logos/zeplin.svg", color: "#fdbd39" },
-        { name: "Illustrator", logo: "/logos/illustrator.svg", color: "#ff9a00" }
+        { name: "Material UI", logo: "https://mui.com/static/logo.svg", color: "#1976d2" },
+        { name: "Figma", logo: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg", color: "#f24e1e" },
+        { name: "Sketch", logo: "https://upload.wikimedia.org/wikipedia/commons/5/59/Sketch_Logo.svg", color: "#f7b500" },
+        { name: "Adobe XD", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg", color: "#ff61f6" },
+        { name: "Miro", logo: "https://cdn.worldvectorlogo.com/logos/miro-2.svg", color: "#050038" },
+        { name: "Photoshop", logo: "https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg", color: "#31a8ff" },
+        { name: "Axure", logo: "https://cdn.worldvectorlogo.com/logos/axure-rp.svg", color: "#00c4cc" },
+        { name: "HTML5", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", color: "#e34f26" },
+        { name: "Zeplin", logo: "https://cdn.worldvectorlogo.com/logos/zeplin.svg", color: "#fdbd39" },
+        { name: "Illustrator", logo: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg", color: "#ff9a00" }
       ],
       "Frontend": [
-        { name: "React", logo: "/logos/react.svg", color: "#61dafb" },
-        { name: "Vue.js", logo: "/logos/vue.svg", color: "#4fc08d" },
-        { name: "Angular", logo: "/logos/angular.svg", color: "#dd0031" },
-        { name: "Next.js", logo: "/logos/nextjs.svg", color: "#000000" },
-        { name: "TypeScript", logo: "/logos/typescript.svg", color: "#3178c6" },
-        { name: "JavaScript", logo: "/logos/javascript.svg", color: "#f7df1e" },
-        { name: "Tailwind CSS", logo: "/logos/tailwind.svg", color: "#06b6d4" },
-        { name: "SASS", logo: "/logos/sass.svg", color: "#cc6699" },
-        { name: "Webpack", logo: "/logos/webpack.svg", color: "#8dd6f9" },
-        { name: "Vite", logo: "/logos/vite.svg", color: "#646cff" }
+        { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", color: "#61dafb" },
+        { name: "Vue.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg", color: "#4fc08d" },
+        { name: "Angular", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg", color: "#dd0031" },
+        { name: "Next.js", logo: "https://cdn.worldvectorlogo.com/logos/nextjs-2.svg", color: "#000000" },
+        { name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", color: "#3178c6" },
+        { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", color: "#f7df1e" },
+        { name: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg", color: "#06b6d4" },
+        { name: "SASS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg", color: "#cc6699" },
+        { name: "Webpack", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg", color: "#8dd6f9" },
+        { name: "Vite", logo: "https://vitejs.dev/logo.svg", color: "#646cff" }
       ],
       "Backend": [
-        { name: "Node.js", logo: "/logos/nodejs.svg", color: "#339933" },
-        { name: "Python", logo: "/logos/python.svg", color: "#3776ab" },
-        { name: "Java", logo: "/logos/java.svg", color: "#ed8b00" },
-        { name: "PHP", logo: "/logos/php.svg", color: "#777bb4" },
-        { name: "C#", logo: "/logos/csharp.svg", color: "#239120" },
-        { name: "Express.js", logo: "/logos/express.svg", color: "#000000" },
-        { name: "Django", logo: "/logos/django.svg", color: "#092e20" },
-        { name: "FastAPI", logo: "/logos/fastapi.svg", color: "#009688" },
-        { name: "Spring Boot", logo: "/logos/spring.svg", color: "#6db33f" },
-        { name: ".NET", logo: "/logos/dotnet.svg", color: "#512bd4" }
+        { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", color: "#339933" },
+        { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", color: "#3776ab" },
+        { name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", color: "#ed8b00" },
+        { name: "PHP", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg", color: "#777bb4" },
+        { name: "C#", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg", color: "#239120" },
+        { name: "Express.js", logo: "https://cdn.worldvectorlogo.com/logos/express-109.svg", color: "#000000" },
+        { name: "Django", logo: "https://cdn.worldvectorlogo.com/logos/django.svg", color: "#092e20" },
+        { name: "FastAPI", logo: "https://cdn.worldvectorlogo.com/logos/fastapi-1.svg", color: "#009688" },
+        { name: "Spring Boot", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg", color: "#6db33f" },
+        { name: ".NET", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg", color: "#512bd4" }
       ],
       "Mobile": [
-        { name: "React Native", logo: "/logos/react-native.svg", color: "#61dafb" },
-        { name: "Flutter", logo: "/logos/flutter.svg", color: "#02569b" },
-        { name: "Swift", logo: "/logos/swift.svg", color: "#fa7343" },
-        { name: "Kotlin", logo: "/logos/kotlin.svg", color: "#7f52ff" },
-        { name: "Xamarin", logo: "/logos/xamarin.svg", color: "#3498db" },
-        { name: "Ionic", logo: "/logos/ionic.svg", color: "#3880ff" },
-        { name: "Cordova", logo: "/logos/cordova.svg", color: "#e8e8e8" },
-        { name: "Android Studio", logo: "/logos/android.svg", color: "#3ddc84" },
-        { name: "Xcode", logo: "/logos/xcode.svg", color: "#1575f9" },
-        { name: "Expo", logo: "/logos/expo.svg", color: "#000020" }
+        { name: "React Native", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", color: "#61dafb" },
+        { name: "Flutter", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg", color: "#02569b" },
+        { name: "Swift", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg", color: "#fa7343" },
+        { name: "Kotlin", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg", color: "#7f52ff" },
+        { name: "Xamarin", logo: "https://cdn.worldvectorlogo.com/logos/xamarin.svg", color: "#3498db" },
+        { name: "Ionic", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg", color: "#3880ff" },
+        { name: "Cordova", logo: "https://cdn.worldvectorlogo.com/logos/cordova.svg", color: "#e8e8e8" },
+        { name: "Android Studio", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg", color: "#3ddc84" },
+        { name: "Xcode", logo: "https://cdn.worldvectorlogo.com/logos/xcode.svg", color: "#1575f9" },
+        { name: "Expo", logo: "https://cdn.worldvectorlogo.com/logos/expo-1.svg", color: "#000020" }
       ],
       "Database": [
-        { name: "MongoDB", logo: "/logos/mongodb.svg", color: "#47a248" },
-        { name: "PostgreSQL", logo: "/logos/postgresql.svg", color: "#336791" },
-        { name: "MySQL", logo: "/logos/mysql.svg", color: "#4479a1" },
-        { name: "Redis", logo: "/logos/redis.svg", color: "#dc382d" },
-        { name: "SQLite", logo: "/logos/sqlite.svg", color: "#003b57" },
-        { name: "Firebase", logo: "/logos/firebase.svg", color: "#ffca28" },
-        { name: "Supabase", logo: "/logos/supabase.svg", color: "#3ecf8e" },
-        { name: "DynamoDB", logo: "/logos/dynamodb.svg", color: "#4053d6" },
-        { name: "Cassandra", logo: "/logos/cassandra.svg", color: "#1287b1" },
-        { name: "Elasticsearch", logo: "/logos/elasticsearch.svg", color: "#005571" }
+        { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", color: "#47a248" },
+        { name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg", color: "#336791" },
+        { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", color: "#4479a1" },
+        { name: "Redis", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg", color: "#dc382d" },
+        { name: "SQLite", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg", color: "#003b57" },
+        { name: "Firebase", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg", color: "#ffca28" },
+        { name: "Supabase", logo: "https://cdn.worldvectorlogo.com/logos/supabase-logo-icon.svg", color: "#3ecf8e" },
+        { name: "DynamoDB", logo: "https://cdn.worldvectorlogo.com/logos/aws-dynamodb.svg", color: "#4053d6" },
+        { name: "Cassandra", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cassandra/cassandra-original.svg", color: "#1287b1" },
+        { name: "Elasticsearch", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elasticsearch/elasticsearch-original.svg", color: "#005571" }
       ],
       "Cloud": [
-        { name: "AWS", logo: "/logos/aws.svg", color: "#ff9900" },
-        { name: "Azure", logo: "/logos/azure.svg", color: "#0078d4" },
-        { name: "Google Cloud", logo: "/logos/gcp.svg", color: "#4285f4" },
-        { name: "Vercel", logo: "/logos/vercel.svg", color: "#000000" },
-        { name: "Netlify", logo: "/logos/netlify.svg", color: "#00c7b7" },
-        { name: "Heroku", logo: "/logos/heroku.svg", color: "#430098" },
-        { name: "DigitalOcean", logo: "/logos/digitalocean.svg", color: "#0080ff" },
-        { name: "Cloudflare", logo: "/logos/cloudflare.svg", color: "#f38020" },
-        { name: "Lambda", logo: "/logos/lambda.svg", color: "#ff9900" },
-        { name: "S3", logo: "/logos/s3.svg", color: "#569a31" }
+        { name: "AWS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg", color: "#ff9900" },
+        { name: "Azure", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg", color: "#0078d4" },
+        { name: "Google Cloud", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg", color: "#4285f4" },
+        { name: "Vercel", logo: "https://cdn.worldvectorlogo.com/logos/vercel.svg", color: "#000000" },
+        { name: "Netlify", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg", color: "#00c7b7" },
+        { name: "Heroku", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg", color: "#430098" },
+        { name: "DigitalOcean", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg", color: "#0080ff" },
+        { name: "Cloudflare", logo: "https://cdn.worldvectorlogo.com/logos/cloudflare-logo.svg", color: "#f38020" },
+        { name: "Lambda", logo: "https://cdn.worldvectorlogo.com/logos/aws-lambda-1.svg", color: "#ff9900" },
+        { name: "S3", logo: "https://cdn.worldvectorlogo.com/logos/aws-s3.svg", color: "#569a31" }
       ],
       "DevOps": [
-        { name: "Docker", logo: "/logos/docker.svg", color: "#2496ed" },
-        { name: "Kubernetes", logo: "/logos/kubernetes.svg", color: "#326ce5" },
-        { name: "Jenkins", logo: "/logos/jenkins.svg", color: "#d33833" },
-        { name: "GitHub Actions", logo: "/logos/github-actions.svg", color: "#2088ff" },
-        { name: "GitLab CI", logo: "/logos/gitlab.svg", color: "#fc6d26" },
-        { name: "Terraform", logo: "/logos/terraform.svg", color: "#7b42bc" },
-        { name: "Ansible", logo: "/logos/ansible.svg", color: "#ee0000" },
-        { name: "CircleCI", logo: "/logos/circleci.svg", color: "#343434" },
-        { name: "Travis CI", logo: "/logos/travis.svg", color: "#3eaaaf" },
-        { name: "Azure DevOps", logo: "/logos/azure-devops.svg", color: "#0078d4" }
+        { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", color: "#2496ed" },
+        { name: "Kubernetes", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg", color: "#326ce5" },
+        { name: "Jenkins", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg", color: "#d33833" },
+        { name: "GitHub Actions", logo: "https://cdn.worldvectorlogo.com/logos/github-actions.svg", color: "#2088ff" },
+        { name: "GitLab CI", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg", color: "#fc6d26" },
+        { name: "Terraform", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg", color: "#7b42bc" },
+        { name: "Ansible", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg", color: "#ee0000" },
+        { name: "CircleCI", logo: "https://cdn.worldvectorlogo.com/logos/circleci.svg", color: "#343434" },
+        { name: "Travis CI", logo: "https://cdn.worldvectorlogo.com/logos/travis-ci.svg", color: "#3eaaaf" },
+        { name: "Azure DevOps", logo: "https://cdn.worldvectorlogo.com/logos/azure-devops.svg", color: "#0078d4" }
       ],
       "Monitoring": [
-        { name: "Grafana", logo: "/logos/grafana.svg", color: "#f46800" },
-        { name: "Prometheus", logo: "/logos/prometheus.svg", color: "#e6522c" },
-        { name: "ELK Stack", logo: "/logos/elasticsearch.svg", color: "#005571" },
-        { name: "New Relic", logo: "/logos/newrelic.svg", color: "#008c99" },
-        { name: "Datadog", logo: "/logos/datadog.svg", color: "#632ca6" },
-        { name: "Splunk", logo: "/logos/splunk.svg", color: "#000000" },
-        { name: "Sentry", logo: "/logos/sentry.svg", color: "#362d59" },
-        { name: "Logstash", logo: "/logos/logstash.svg", color: "#005571" },
-        { name: "Kibana", logo: "/logos/kibana.svg", color: "#005571" },
-        { name: "CloudWatch", logo: "/logos/cloudwatch.svg", color: "#ff9900" }
+        { name: "Grafana", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg", color: "#f46800" },
+        { name: "Prometheus", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg", color: "#e6522c" },
+        { name: "ELK Stack", logo: "https://cdn.worldvectorlogo.com/logos/elastic-stack.svg", color: "#005571" },
+        { name: "New Relic", logo: "https://cdn.worldvectorlogo.com/logos/new-relic-logo.svg", color: "#008c99" },
+        { name: "Datadog", logo: "https://cdn.worldvectorlogo.com/logos/datadog.svg", color: "#632ca6" },
+        { name: "Splunk", logo: "https://cdn.worldvectorlogo.com/logos/splunk.svg", color: "#000000" },
+        { name: "Sentry", logo: "https://cdn.worldvectorlogo.com/logos/sentry-3.svg", color: "#362d59" },
+        { name: "Logstash", logo: "https://cdn.worldvectorlogo.com/logos/logstash.svg", color: "#005571" },
+        { name: "Kibana", logo: "https://cdn.worldvectorlogo.com/logos/kibana.svg", color: "#005571" },
+        { name: "CloudWatch", logo: "https://cdn.worldvectorlogo.com/logos/aws-cloudwatch.svg", color: "#ff9900" }
       ],
       "Security": [
-        { name: "OAuth", logo: "/logos/oauth.svg", color: "#3c4043" },
-        { name: "JWT", logo: "/logos/jwt.svg", color: "#000000" },
-        { name: "SSL/TLS", logo: "/logos/ssl.svg", color: "#721c24" },
-        { name: "OWASP", logo: "/logos/owasp.svg", color: "#000000" },
-        { name: "Auth0", logo: "/logos/auth0.svg", color: "#eb5424" },
-        { name: "Keycloak", logo: "/logos/keycloak.svg", color: "#4d9fdb" },
-        { name: "Vault", logo: "/logos/vault.svg", color: "#000000" },
-        { name: "SonarQube", logo: "/logos/sonarqube.svg", color: "#4e9bcd" },
-        { name: "Snyk", logo: "/logos/snyk.svg", color: "#4c4a73" },
-        { name: "LDAP", logo: "/logos/ldap.svg", color: "#003366" }
+        { name: "OAuth", logo: "https://oauth.net/images/oauth-2-sm.png", color: "#3c4043" },
+        { name: "JWT", logo: "https://jwt.io/img/pic_logo.svg", color: "#000000" },
+        { name: "SSL/TLS", logo: "https://cdn.worldvectorlogo.com/logos/ssl-1.svg", color: "#721c24" },
+        { name: "OWASP", logo: "https://cdn.worldvectorlogo.com/logos/owasp.svg", color: "#000000" },
+        { name: "Auth0", logo: "https://cdn.worldvectorlogo.com/logos/auth0.svg", color: "#eb5424" },
+        { name: "Keycloak", logo: "https://cdn.worldvectorlogo.com/logos/keycloak.svg", color: "#4d9fdb" },
+        { name: "Vault", logo: "https://cdn.worldvectorlogo.com/logos/vault-enterprise.svg", color: "#000000" },
+        { name: "SonarQube", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sonarqube/sonarqube-original.svg", color: "#4e9bcd" },
+        { name: "Snyk", logo: "https://cdn.worldvectorlogo.com/logos/snyk.svg", color: "#4c4a73" },
+        { name: "LDAP", logo: "https://upload.wikimedia.org/wikipedia/commons/e/eb/LDAP_logo.png", color: "#003366" }
       ],
       "CMS": [
-        { name: "WordPress", logo: "/logos/wordpress.svg", color: "#21759b" },
-        { name: "Drupal", logo: "/logos/drupal.svg", color: "#0077c0" },
-        { name: "Strapi", logo: "/logos/strapi.svg", color: "#2e7eea" },
-        { name: "Contentful", logo: "/logos/contentful.svg", color: "#2478cc" },
-        { name: "Sanity", logo: "/logos/sanity.svg", color: "#f03e2f" },
-        { name: "Ghost", logo: "/logos/ghost.svg", color: "#15171a" },
-        { name: "Webflow", logo: "/logos/webflow.svg", color: "#4353ff" },
-        { name: "Shopify", logo: "/logos/shopify.svg", color: "#7ab55c" },
-        { name: "Magento", logo: "/logos/magento.svg", color: "#ee672f" },
-        { name: "WooCommerce", logo: "/logos/woocommerce.svg", color: "#96588a" }
+        { name: "WordPress", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg", color: "#21759b" },
+        { name: "Drupal", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/drupal/drupal-original.svg", color: "#0077c0" },
+        { name: "Strapi", logo: "https://cdn.worldvectorlogo.com/logos/strapi-2.svg", color: "#2e7eea" },
+        { name: "Contentful", logo: "https://cdn.worldvectorlogo.com/logos/contentful.svg", color: "#2478cc" },
+        { name: "Sanity", logo: "https://cdn.worldvectorlogo.com/logos/sanity.svg", color: "#f03e2f" },
+        { name: "Ghost", logo: "https://cdn.worldvectorlogo.com/logos/ghost.svg", color: "#15171a" },
+        { name: "Webflow", logo: "https://cdn.worldvectorlogo.com/logos/webflow.svg", color: "#4353ff" },
+        { name: "Shopify", logo: "https://cdn.worldvectorlogo.com/logos/shopify.svg", color: "#7ab55c" },
+        { name: "Magento", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/magento/magento-original.svg", color: "#ee672f" },
+        { name: "WooCommerce", logo: "https://cdn.worldvectorlogo.com/logos/woocommerce.svg", color: "#96588a" }
       ],
       "CRM": [
-        { name: "Salesforce", logo: "/logos/salesforce.svg", color: "#00a1e0" },
-        { name: "HubSpot", logo: "/logos/hubspot.svg", color: "#ff7a59" },
-        { name: "Zoho", logo: "/logos/zoho.svg", color: "#c83e32" },
-        { name: "Microsoft Dynamics", logo: "/logos/dynamics.svg", color: "#002050" },
-        { name: "Pipedrive", logo: "/logos/pipedrive.svg", color: "#28a745" },
-        { name: "SAP", logo: "/logos/sap.svg", color: "#0faaff" },
-        { name: "Oracle", logo: "/logos/oracle.svg", color: "#f80000" },
-        { name: "ServiceNow", logo: "/logos/servicenow.svg", color: "#62d84e" },
-        { name: "Freshworks", logo: "/logos/freshworks.svg", color: "#f79a00" },
-        { name: "Airtable", logo: "/logos/airtable.svg", color: "#18bfff" }
+        { name: "Salesforce", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg", color: "#00a1e0" },
+        { name: "HubSpot", logo: "https://cdn.worldvectorlogo.com/logos/hubspot.svg", color: "#ff7a59" },
+        { name: "Zoho", logo: "https://cdn.worldvectorlogo.com/logos/zoho.svg", color: "#c83e32" },
+        { name: "Microsoft Dynamics", logo: "https://cdn.worldvectorlogo.com/logos/microsoft-dynamics-365.svg", color: "#002050" },
+        { name: "Pipedrive", logo: "https://cdn.worldvectorlogo.com/logos/pipedrive.svg", color: "#28a745" },
+        { name: "SAP", logo: "https://cdn.worldvectorlogo.com/logos/sap-3.svg", color: "#0faaff" },
+        { name: "Oracle", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg", color: "#f80000" },
+        { name: "ServiceNow", logo: "https://cdn.worldvectorlogo.com/logos/servicenow.svg", color: "#62d84e" },
+        { name: "Freshworks", logo: "https://cdn.worldvectorlogo.com/logos/freshworks.svg", color: "#f79a00" },
+        { name: "Airtable", logo: "https://cdn.worldvectorlogo.com/logos/airtable.svg", color: "#18bfff" }
       ],
       "Collaboration": [
-        { name: "Slack", logo: "/logos/slack.svg", color: "#4a154b" },
-        { name: "Microsoft Teams", logo: "/logos/teams.svg", color: "#6264a7" },
-        { name: "Discord", logo: "/logos/discord.svg", color: "#5865f2" },
-        { name: "Zoom", logo: "/logos/zoom.svg", color: "#2d8cff" },
-        { name: "Jira", logo: "/logos/jira.svg", color: "#0052cc" },
-        { name: "Confluence", logo: "/logos/confluence.svg", color: "#172b4d" },
-        { name: "Notion", logo: "/logos/notion.svg", color: "#000000" },
-        { name: "Trello", logo: "/logos/trello.svg", color: "#0052cc" },
-        { name: "Asana", logo: "/logos/asana.svg", color: "#f06a6a" },
-        { name: "Monday.com", logo: "/logos/monday.svg", color: "#ff3d57" }
+        { name: "Slack", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg", color: "#4a154b" },
+        { name: "Microsoft Teams", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg", color: "#6264a7" },
+        { name: "Discord", logo: "https://cdn.worldvectorlogo.com/logos/discord-6.svg", color: "#5865f2" },
+        { name: "Zoom", logo: "https://cdn.worldvectorlogo.com/logos/zoom-communications.svg", color: "#2d8cff" },
+        { name: "Jira", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg", color: "#0052cc" },
+        { name: "Confluence", logo: "https://cdn.worldvectorlogo.com/logos/confluence-1.svg", color: "#172b4d" },
+        { name: "Notion", logo: "https://cdn.worldvectorlogo.com/logos/notion-logo-1.svg", color: "#000000" },
+        { name: "Trello", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg", color: "#0052cc" },
+        { name: "Asana", logo: "https://cdn.worldvectorlogo.com/logos/asana-logo.svg", color: "#f06a6a" },
+        { name: "Monday.com", logo: "https://cdn.worldvectorlogo.com/logos/monday-com.svg", color: "#ff3d57" }
       ]
     }
   }
@@ -243,23 +243,24 @@ export default function TechCapabilities() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-600">{techData.title.accent}</span>
             <span className="text-gray-900">{techData.title.part2}</span>
           </h2>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-            {getTabDescription(activeTab)}
-          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Left Side - Tabs */}
-          <div className="lg:col-span-4">
-            <div className="flex flex-wrap lg:flex-col gap-3">
+          <div className="lg:col-span-3">
+            <div className="grid grid-cols-2 gap-3">
               {techData.tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => handleTabClick(tab.id)}
-                  className={`px-4 py-3 rounded-lg text-left transition-all duration-300 ${
+                  className={`px-6 py-4 rounded-full text-center transition-all duration-300 text-sm font-medium border border-gray-300 ${
                     activeTab === tab.id
-                      ? 'bg-gradient-to-r from-yellow-400 to-orange-400 text-black font-medium shadow-lg'
+                      ? 'bg-gradient-to-r from-yellow-400 to-orange-400 text-black shadow-lg border-gray-400'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-gray-900'
+                  } ${
+                    tab.name === 'Monitoring & Logging' || tab.name === 'Collaboration Tools' || tab.name === 'CRM/ERP/Platforms'
+                      ? 'col-span-2'
+                      : ''
                   }`}
                 >
                   {tab.name}
@@ -269,24 +270,43 @@ export default function TechCapabilities() {
           </div>
 
           {/* Right Side - Technology Grid */}
-          <div className="lg:col-span-8">
+          <div className="lg:col-span-9">
+            <div className="mb-6">
+              <p className="text-gray-600 text-lg">
+                {getTabDescription(activeTab)}
+              </p>
+            </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {techData.technologies[activeTab]?.map((tech, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-gray-200 group"
+                  className="bg-white rounded-4xl p-6 transition-all duration-300 hover:shadow-2xl group text-center"
+                  style={{ boxShadow: '0 10px 30px rgba(128, 128, 128, 0.3), 0 4px 15px rgba(128, 128, 128, 0.2)' }}
                 >
-                  <div className="flex flex-col items-center text-center space-y-3">
-                    {/* Tech Icon Placeholder */}
-                    <div 
-                      className="w-12 h-12 rounded-lg flex items-center justify-center text-white font-bold text-lg"
-                      style={{ backgroundColor: tech.color }}
-                    >
-                      {tech.name.charAt(0)}
+                  {/* Tech Logo */}
+                  <div className="flex items-center justify-center mb-3">
+                    <div className="w-16 h-16 flex items-center justify-center">
+                      <img 
+                        src={tech.logo} 
+                        alt={tech.name}
+                        className="w-14 h-14 object-contain"
+                        onError={(e) => {
+                          // Fallback to colored letter if image fails to load
+                          e.target.style.display = 'none';
+                          e.target.nextSibling.style.display = 'flex';
+                        }}
+                      />
+                      <div 
+                        className="w-14 h-14 rounded-lg items-center justify-center text-white font-bold text-xl hidden"
+                        style={{ backgroundColor: tech.color }}
+                      >
+                        {tech.name.charAt(0)}
+                      </div>
                     </div>
-                    <span className="text-gray-700 font-medium text-sm group-hover:text-gray-900 transition-colors">
-                      {tech.name}
-                    </span>
+                  </div>
+                  {/* Tech Name Label */}
+                  <div className="text-xs text-gray-600 font-medium">
+                    {tech.name}
                   </div>
                 </div>
               ))}
