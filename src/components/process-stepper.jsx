@@ -123,7 +123,7 @@ export function ProcessStepper() {
                 {/* Default State Content */}
                 <div className={`p-4 sm:p-6 ${
                   isExpanded && isMobile
-                    ? 'h-auto min-h-[200px]'
+                    ? 'h-auto'
                     : 'h-[150px] md:h-[500px]'
                 } flex flex-col transition-all duration-500 ease-in-out ${
                   isExpanded ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
@@ -160,11 +160,13 @@ export function ProcessStepper() {
                 </div>
 
                 {/* Expanded/Hovered State Content */}
-                <div className={`absolute inset-0 p-4 sm:p-8 flex flex-col text-white transition-all duration-500 ease-in-out ${
+                <div className={`${
+                  isMobile && isExpanded ? 'relative' : 'absolute inset-0'
+                } ${isMobile ? 'p-4 pt-2' : 'p-4 sm:p-8'} flex flex-col text-white transition-all duration-500 ease-in-out ${
                   isExpanded ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 translate-y-2 pointer-events-none'
                 }`}>
                   {/* Step Number and Icon at Top - Same Line */}
-                  <div className="flex items-center justify-between mb-6 transition-all duration-300">
+                  <div className="flex items-center justify-between mb-2 md:mb-6 transition-all duration-300">
                     <div className="text-white/80 text-lg font-medium transition-all duration-300">
                       p{step.number}
                     </div>
@@ -174,15 +176,15 @@ export function ProcessStepper() {
                   </div>
 
                   {/* Title */}
-                  <div className="mb-6 transition-all duration-300">
-                    <h3 className="text-3xl font-bold text-white transition-all duration-300 hover:text-white/90">
+                  <div className="mb-2 md:mb-6 transition-all duration-300">
+                    <h3 className="text-2xl md:text-3xl font-bold text-white transition-all duration-300 hover:text-white/90">
                       {step.fullTitle}
                     </h3>
                   </div>
 
                   {/* Description - Directly below title */}
                   <div className="transition-all duration-300">
-                    <p className="text-white/90 leading-relaxed text-xl max-w-md font-bold transition-all duration-300 hover:text-white">
+                    <p className="text-white/90 leading-relaxed text-base md:text-xl max-w-md font-bold transition-all duration-300 hover:text-white">
                       {step.description}
                     </p>
                   </div>

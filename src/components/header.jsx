@@ -89,7 +89,7 @@ export function Header() {
               {/* Invospire Logo */}
               <div className="flex items-center space-x-3">
                 <img 
-                  src="/invospire-logo.png" 
+                  src="/invospire-logo.svg" 
                   alt="Invospire Logo" 
                   className="h-65 w-auto transition-transform duration-300 group-hover:scale-110"
                 />
