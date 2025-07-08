@@ -65,12 +65,12 @@ export default function HeroBanner() {
             <div className={`transition-all duration-1000 delay-500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Link href="/services">
-                  <div className="bg-gradient-to-r from-[#2DD4BF] to-[#FBBF24] p-[2px] rounded-full group shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div className="bg-black hover:bg-gray-900 px-10 py-4 rounded-full flex items-center">
-                      <span className="text-lg font-semibold text-white">
+                  <div className="bg-gradient-to-r from-[#2DD4BF] to-[#FBBF24] p-[2px] rounded-full group shadow-lg hover:shadow-xl transition-all duration-300 w-fit">
+                    <div className="bg-black hover:bg-gray-900 px-6 sm:px-10 py-3 sm:py-4 rounded-full flex items-center">
+                      <span className="text-base sm:text-lg font-semibold text-white">
                         Get Started
                       </span>
-                      <ArrowRight className="w-5 h-5 ml-2 text-white group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 ml-2 text-white group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
                 </Link>

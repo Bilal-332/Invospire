@@ -235,16 +235,24 @@ export function Header() {
                 <div key={item.name}>
                   {item.children ? (
                     <div>
-                      <button
-                        onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-                        className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-white hover:text-[#2DD4BF] hover:bg-gray-800/50 rounded-md"
-                      >
-                        <span>{item.name}</span>
-                        <ChevronDown className={cn(
-                          "w-4 h-4 transition-transform duration-200",
-                          activeDropdown === item.name && "rotate-180"
-                        )} />
-                      </button>
+                      <div className="flex">
+                        <Link
+                          href={item.href}
+                          className="flex-1 px-3 py-2 text-base font-medium text-white hover:text-[#2DD4BF] hover:bg-gray-800/50 rounded-l-md"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {item.name}
+                        </Link>
+                        <button
+                          onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+                          className="px-3 py-2 text-base font-medium text-white hover:text-[#2DD4BF] hover:bg-gray-800/50 rounded-r-md border-l border-gray-700"
+                        >
+                          <ChevronDown className={cn(
+                            "w-4 h-4 transition-transform duration-200",
+                            activeDropdown === item.name && "rotate-180"
+                          )} />
+                        </button>
+                      </div>
                       {activeDropdown === item.name && (
                         <div className="pl-4 space-y-1">
                           {item.name === "Services" ? (

@@ -162,7 +162,7 @@ export function ProcessStepper() {
                 {/* Expanded/Hovered State Content */}
                 <div className={`${
                   isMobile && isExpanded ? 'relative' : 'absolute inset-0'
-                } ${isMobile ? 'p-4 pt-2' : 'p-4 sm:p-8'} flex flex-col text-white transition-all duration-500 ease-in-out ${
+                } ${isMobile ? 'p-4 pt-0' : 'p-4 sm:p-8'} flex flex-col text-white transition-all duration-500 ease-in-out ${
                   isExpanded ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 translate-y-2 pointer-events-none'
                 }`}>
                   {/* Step Number and Icon at Top - Same Line */}
