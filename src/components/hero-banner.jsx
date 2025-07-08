@@ -38,17 +38,17 @@ export default function HeroBanner() {
         backgroundSize: '50px 50px'
       }}></div>
 
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[110vh] pt-24 lg:pt-28 pb-24">
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-7xl relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center min-h-[110vh] pt-20 sm:pt-24 lg:pt-28 pb-16 sm:pb-24">
           {/* Left Column - Content */}
-          <div className="space-y-12 px-4 lg:px-8">
+          <div className="space-y-8 sm:space-y-12 px-2 sm:px-4 lg:px-8">
             {/* Main Heading */}
             <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <h1 className="text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.1] mb-16 pb-4">
-                <span className="block text-white mb-4">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.1] mb-8 sm:mb-12 lg:mb-16 pb-2 sm:pb-4">
+                <span className="block text-white mb-2 sm:mb-4">
                   Simply Exceptional
                 </span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#2DD4BF] to-[#FBBF24] pb-2">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#2DD4BF] to-[#FBBF24] pb-1 sm:pb-2">
                   Software Engineering
                 </span>
               </h1>
@@ -56,7 +56,7 @@ export default function HeroBanner() {
 
             {/* Subtitle */}
             <div className={`transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl">
+              <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed w-full max-w-2xl">
                 We ideate, engineer, and transform digital landscapes to help your business stay modern, efficient, and agile.
               </p>
             </div>
@@ -79,7 +79,7 @@ export default function HeroBanner() {
           </div>
 
           {/* Right Column - Static 3D Torus Shape */}
-          <div className="relative h-[600px] lg:h-[700px]">
+          <div className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px]">
             <Suspense fallback={
               <div className="w-full h-full flex items-center justify-center">
                 <div className="w-16 h-16 border-4 border-teal-500 border-t-transparent rounded-full animate-spin"></div>
