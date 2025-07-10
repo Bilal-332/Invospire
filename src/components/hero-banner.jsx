@@ -44,7 +44,7 @@ export default function HeroBanner() {
           <div className="space-y-8 sm:space-y-12 px-2 sm:px-4 lg:px-8">
             {/* Main Heading */}
             <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.1] mb-8 sm:mb-12 lg:mb-16 pb-2 sm:pb-4">
+              <h1 className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-8 sm:mb-12 lg:mb-16 pb-2 sm:pb-4">
                 <span className="block text-white mb-2 sm:mb-4">
                   Simply Exceptional
                 </span>

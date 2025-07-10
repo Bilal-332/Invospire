@@ -6,7 +6,7 @@ import { Star } from "lucide-react"
 const testimonials = [
   {
     id: 1,
-    text: "I extend my sincere gratitude to Unified Infotech for their exceptional work in reengineering our platform, Boards & Beyond. Their efforts not only resulted in a swift doubling of our sales but also facilitated our acquisition by a large multinational corporation. I hold their team in high regard, particularly for their unwavering commitment to the success of our business.",
+    text: "I extend my sincere gratitude to Invospire for their exceptional work in reengineering our platform, Boards & Beyond. Their efforts not only resulted in a swift doubling of our sales but also facilitated our acquisition by a large multinational corporation. I hold their team in high regard, particularly for their unwavering commitment to the success of our business.",
     author: "Jason Ryan",
     position: "Founder & CEO",
     company: "Boards & Beyond",
@@ -14,9 +14,9 @@ const testimonials = [
     rating: 5,
     metrics: {
       quality: 5.0,
-      schedule: 4.0,
-      cost: 4.0,
-      willingness: 5.0
+      schedule: 4.3,
+      cost: 4.8,
+      willingness: 4.5
     },
     region: "North America",
     flag: "🇺🇸"
